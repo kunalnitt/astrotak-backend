@@ -12,7 +12,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(cors())
 
-mongoose.connect('mongodb+srv://testUser:!a7MXF4a!JWzzU9@cluster0.7gxtc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://testusr:rEPKYz1RutIkM4mt@cluster0.7gxtc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 var db = mongoose.connection;
 
 var port = process.env.PORT || 8000;
