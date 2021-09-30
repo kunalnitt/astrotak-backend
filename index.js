@@ -1,15 +1,16 @@
 const express = require('express');
-var apiRoutes = require('./src/api-routes');
-const bodyparser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors')
+const apiRoutes = require('./src/api-routes');
 
 const app = express();
 
-app.use(bodyparser.urlencoded({
+app.use(express.urlencoded({
     extended: true
 }))
 
-app.use(bodyparser.json());
+app.use(express.json());
+app.use(cors())
 
 mongoose.connect('mongodb+srv://testUser:!a7MXF4a!JWzzU9@cluster0.7gxtc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 var db = mongoose.connection;

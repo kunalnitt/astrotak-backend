@@ -1,7 +1,7 @@
 Horoscope = require('./../models/horoscopeModel');
 
 exports.all = function(req,res) {
-    Horoscope.get(function(err,horoscopes){
+    Horoscope.find({},function(err,horoscopes){
         if(err){
             res.json({
                 status:'err',

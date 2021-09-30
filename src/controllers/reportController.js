@@ -1,7 +1,7 @@
 Report = require('./../models/reportModel');
 
 exports.all = function(req,res) {
-    Report.get(function(err,reports){
+    Report.find({},function(err,reports){
         if(err){
             res.json({
                 status:'err',

@@ -1,7 +1,7 @@
 Question = require('./../models/questionModel');
 
 exports.all = function(req,res) {
-    Question.get(function(err,questions){
+    Question.find({},function(err,questions){
         if(err){
             res.json({
                 status:'err',

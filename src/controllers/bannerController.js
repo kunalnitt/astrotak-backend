@@ -1,7 +1,7 @@
 Banner = require('./../models/bannerModel');
 
 exports.all = function(req,res) {
-    Banner.get(function(err,banners){
+    Banner.find({},function(err,banners){
         if(err){
             res.json({
                 status:'err',

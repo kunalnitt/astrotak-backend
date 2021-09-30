@@ -1,7 +1,7 @@
 Astro = require('./../models/astroModel');
 
 exports.all = function(req,res) {
-    Astro.get(function(err,astros){
+    Astro.find({},function(err,astros){
         if(err){
             res.json({
                 status:'err',
