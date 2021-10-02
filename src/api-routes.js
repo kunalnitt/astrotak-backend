@@ -6,6 +6,7 @@ var bannerController = require('./controllers/bannerController');
 var horoscopeController = require('./controllers/horoscopeController');
 var questionController = require('./controllers/questionController');
 var reportController = require('./controllers/reportController');
+var customerController = require('./controllers/customerController');
 
 router.get('/',(req,res) => {
     res.json({
@@ -28,5 +29,8 @@ router.route('/question')
 
 router.route('/report')
     .get(reportController.all)
+
+router.route('/customer')
+    .get(customerController.all)
 
 module.exports = router;
